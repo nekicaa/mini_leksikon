@@ -11,10 +11,13 @@
     <body style="background-image: url('img/theme-3.jpg'); background-repeat: no-repeat; background-size: cover;">
         <ul class="nav justify-content-center" style="text-align: center; color: white; font-family: Papyrus, fantasy">
             <li class="nav-item">
-                <a class="nav-link active" href="index.php">Upisi se u leksikon</a>
+                <a class="nav-link" href="index.php">Pocetna</a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link active" href="fillform.php">Upisi se u leksikon</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="predstave.php">Vidi leksikon</a>
+                <a class="nav-link" href="journal.php">Vidi leksikon</a>
             </li> 
         </ul>
 
@@ -26,7 +29,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 mx-a" style="margin-left:auto;margin-right:auto;">
+                <div class="col-md-6 mx-a" style="margin-left:auto;margin-right:auto;">
 
                     <form action="" method="post">
                         <div class="form-group">
@@ -42,11 +45,23 @@
                             <input type="text" name="phone" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="" style="color: white; font-family: Papyrus, fantasy">Address</label>
-                            <textarea name="address" id="" cols="" rows="" class="form-control"></textarea>
+                            <label for="" style="color: white; font-family: Papyrus, fantasy">Da li imas brata ili sestru?</label>
+                            <input type="text" name="siblings" class="form-control">
                         </div>
                         <div class="form-group">
-                            <button type="submit" name="submit" class="btn btn-primary" style="color: white; font-family: Papyrus, fantasy">Submit</button>
+                            <label for="" style="color: white; font-family: Papyrus, fantasy">Datum rodjenja</label>
+                            <input type="text" name="birth" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="" style="color: white; font-family: Papyrus, fantasy">Kako ti se zove najbolji drug/drugarica?</label>
+                            <input type="text" name="friend" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="" style="color: dark-blue; font-family: Papyrus, fantasy"><b>Poruka za vlasnika leksikona</b></label>
+                            <textarea name="note" id="" cols="" rows="" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" name="submit" class="btn btn-primary" style="color: white; font-family: Papyrus, fantasy">Popunjeno!</button>
                         </div>
                     </form>
 
