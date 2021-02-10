@@ -43,7 +43,7 @@
                             <input type="text" name="name" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="" style="color: white; font-family: Papyrus, fantasy">Nadimak</label>
+                            <label for="" style="color: white; font-family: Papyrus, fantasy">Da li imas nadimak?</label>
                             <input type="text" name="nick" class="form-control">
                         </div>
                         <div class="form-group">
@@ -63,7 +63,7 @@
                             <input type="text" name="friend" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="" style="color: dark-blue; font-family: Papyrus, fantasy"><b>Poruka za vlasnika leksikona</b></label>
+                            <label for="" style="color: #37404f; font-family: Papyrus, fantasy"><b>Poruka za vlasnika leksikona</b></label>
                             <textarea name="note" id="" cols="" rows="" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
