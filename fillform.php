@@ -31,6 +31,12 @@
             <div class="row">
                 <div class="col-md-6 mx-a" style="margin-left:auto;margin-right:auto;">
 
+                    <?php
+                        include 'model.php';
+                        $model = new Model();
+                        $insert = $model->insert();
+                    ?>
+
                     <form action="" method="post">
                         <div class="form-group">
                             <label for="" style="color: white; font-family: Papyrus, fantasy">Ime i Prezime</label>
