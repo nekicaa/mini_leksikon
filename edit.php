@@ -32,20 +32,21 @@
                 <div class="col-md-6 mx-a" style="margin-left:auto;margin-right:auto;">
 
                     <?php
-
+                    
                     include 'model.php';
                     $model = new Model();
                     $id = $_REQUEST['id'];
                     $row = $model->edit($id);
 
                     if (isset($_POST['update'])) {
-                        if (isset($_POST['name']) && isset($_POST['nick']) && isset($_POST['phone']) && isset($_POST['siblings']) && isset($_POST['birth']) && isset($_POST['friend']) && isset($_POST['note'])) {
-                            if (!empty($_POST['name']) && !empty($_POST['nick']) && !empty($_POST['phone']) && !empty($_POST['siblings']) && !empty($_POST['birth']) && !empty($_POST['friend']) && !empty($_POST['note'])) {
+                        if (isset($_POST['name']) && isset($_POST['nick']) && isset($_POST['phone']) && isset($_POST['place']) && isset($_POST['siblings']) && isset($_POST['birth']) && isset($_POST['friend']) && isset($_POST['note'])) {
+                            if (!empty($_POST['name']) && !empty($_POST['nick']) && !empty($_POST['phone']) && !empty($_POST['place']) && !empty($_POST['siblings']) && !empty($_POST['birth']) && !empty($_POST['friend']) && !empty($_POST['note'])) {
                                 
                                 $data['id'] = $id;
                                 $data['name'] = $_POST['name'];
                                 $data['nick'] = $_POST['nick'];
                                 $data['phone'] = $_POST['phone'];
+                                $data['place'] = $_POST['place'];
                                 $data['siblings'] = $_POST['siblings'];
                                 $data['birth'] = $_POST['birth'];
                                 $data['friend'] = $_POST['friend'];
@@ -82,6 +83,24 @@
                         <div class="form-group">
                             <label for="" style="color: white; font-family: Papyrus, fantasy">Broj telefona</label>
                             <input type="text" name="phone" value="<?php echo $row['phone'];?>" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="" style="color: white; font-family: Papyrus, fantasy">Odakle si?</label>
+                                <?php
+                                    $conn = $model->ret();
+                                    $query = "SELECT * FROM places";
+                                    $pl = $conn->query($query);
+                                ?>
+                            <select class="form-control" name="place" id="place">
+                                <option disabled selected value><?php echo $row['pname'];?></option>
+                                <?php
+                                    while ($ch=$pl->fetch_array()) {
+                                ?>
+                                <option value="<?php echo $ch['id'];?>"><?php echo $ch['pname'];?></option>
+                                <?php
+                                    }
+                                ?>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="" style="color: white; font-family: Papyrus, fantasy">Da li imas brata ili sestru?</label>

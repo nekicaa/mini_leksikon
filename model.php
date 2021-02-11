@@ -85,7 +85,7 @@
         public function edit($id){
             $data = null;
 
-            $query = "SELECT * FROM records WHERE id = '$id'";
+            $query = "SELECT r.id, r.name, r.nick, r.phone, p.pname, r.siblings, r.birth, r.friend, r.note FROM records r JOIN places p ON r.place=p.id WHERE r.id = '$id'";
             if ($sql = $this->conn->query($query)) {
                 while ($row = $sql->fetch_assoc()) {
                     $data = $row;
@@ -95,7 +95,7 @@
         }
 
         public function update($data){
-            $query = "UPDATE records SET name='$data[name]', nick='$data[nick]', phone='$data[phone]', siblings='$data[siblings]', birth='$data[birth]', friend='$data[friend]', note='$data[note]' WHERE id='$data[id]'";
+            $query = "UPDATE records SET name='$data[name]', nick='$data[nick]', phone='$data[phone]', place='$data[place]', siblings='$data[siblings]', birth='$data[birth]', friend='$data[friend]', note='$data[note]' WHERE id='$data[id]'";
             if ($sql = $this->conn->query($query)) {
                 return true;
             }else{
