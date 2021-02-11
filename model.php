@@ -67,6 +67,15 @@
             }
             return $data;
         }
+
+        public function delete($id){
+            $query = "DELETE FROM records WHERE id = '$id'";
+            if ($sql = $this->conn->query($query)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 
 ?>
