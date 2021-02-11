@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mt-5">
-                    <h1 class="text-center" style="color: #37404f; font-family: Papyrus, fantasy">NEVENIN LEKSIKON</h1>
+                    <h1 class="text-center" style="color: #37404f; font-family: Papyrus, fantasy"><b>NEVENIN LEKSIKON</b></h1>
                     <hr style="height: 1px;color: #ba7d3e;background-color: #ba7d3e;">
                 </div>
             </div>
@@ -56,13 +56,13 @@
                                         
                             ?>
                             <tr>
-                                <td style="color: #cbcccc"><?php echo $row['name']; ?></td>
-                                <td style="color: #cbcccc"><?php echo $row['nick']; ?></td>
-                                <td style="color: #cbcccc"><?php echo $row['phone']; ?></td>
-                                <td style="color: #cbcccc"><?php echo $row['siblings']; ?></td>
-                                <td style="color: #cbcccc"><?php echo $row['birth']; ?></td>
-                                <td style="color: #cbcccc"><?php echo $row['friend']; ?></td>
-                                <td style="color: #cbcccc"><?php echo $row['note']; ?></td>
+                                <td style="color: #37404f"><?php echo $row['name']; ?></td>
+                                <td style="color: #37404f"><?php echo $row['nick']; ?></td>
+                                <td style="color: #37404f"><?php echo $row['phone']; ?></td>
+                                <td style="color: #37404f"><?php echo $row['siblings']; ?></td>
+                                <td style="color: #37404f"><?php echo $row['birth']; ?></td>
+                                <td style="color: #37404f"><?php echo $row['friend']; ?></td>
+                                <td style="color: #37404f"><?php echo $row['note']; ?></td>
                                 <td>
                                     <a style="color: white" href="read.php?id=<?php echo $row['id']; ?>">Vidi</a><br>
                                     <a style="color: white" href="delete.php?id=<?php echo $row['id']; ?>">Obrisi</a><br>
