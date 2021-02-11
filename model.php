@@ -55,6 +55,18 @@
             }
             return $data;
         }
+
+        public function fetch_single($id){
+            $data = null;
+            
+            $query = "SELECT * FROM records WHERE id = '$id'";
+            if ($sql = $this->conn->query($query)) {
+                while ($row = $sql->fetch_assoc()) {
+                    $data = $row;
+                }
+            }
+            return $data;
+        }
     }
 
 ?>
