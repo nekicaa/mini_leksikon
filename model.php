@@ -15,20 +15,25 @@
             }
         }
 
+        public function ret(){
+            return $this->conn;
+        }
+
         public function insert(){
             if (isset($_POST['submit'])) {
-                if (isset($_POST['name']) && isset($_POST['nick']) && isset($_POST['phone']) && isset($_POST['siblings']) && isset($_POST['birth']) && isset($_POST['friend']) && isset($_POST['note'])) {
-                    if (!empty($_POST['name']) && !empty($_POST['nick']) && !empty($_POST['phone']) && !empty($_POST['siblings']) && !empty($_POST['birth']) && !empty($_POST['friend']) && !empty($_POST['note'])) {
+                if (isset($_POST['name']) && isset($_POST['nick']) && isset($_POST['phone']) && isset($_POST['place']) && isset($_POST['siblings']) && isset($_POST['birth']) && isset($_POST['friend']) && isset($_POST['note'])) {
+                    if (!empty($_POST['name']) && !empty($_POST['nick']) && !empty($_POST['phone']) && !empty($_POST['place']) && !empty($_POST['siblings']) && !empty($_POST['birth']) && !empty($_POST['friend']) && !empty($_POST['note'])) {
                         
                         $name = $_POST['name'];
                         $nick = $_POST['nick'];
                         $phone = $_POST['phone'];
+                        $place = $_POST['place'];
                         $siblings = $_POST['siblings'];
                         $birth = $_POST['birth'];
                         $friend = $_POST['friend'];
                         $note = $_POST['note'];
 
-                        $query = "INSERT INTO records (name, nick, phone, siblings, birth, friend, note) VALUES ('$name','$nick','$phone','$siblings','$birth','$friend','$note')";
+                        $query = "INSERT INTO records (name, nick, phone, place, siblings, birth, friend, note) VALUES ('$name','$nick','$phone','$place','$siblings','$birth','$friend','$note')";
                         if($sql = $this->conn->query($query)){
                             echo "<script>alert('Uspesno ste se upisali u Nevenin leksikon!');</script>";
                             echo "<script>window.location.href = 'index.php';</script>";
@@ -47,7 +52,7 @@
         public function fetch(){
             $data = null;
 
-            $query = "SELECT * FROM records";
+            $query = "SELECT r.id, r.name, r.nick, r.phone, p.pname, r.siblings, r.birth, r.friend, r.note FROM records r JOIN places p ON r.place=p.id";
             if($sql = $this->conn->query($query)){
                 while ($row = mysqli_fetch_assoc($sql)) {
                     $data[] = $row;
@@ -59,7 +64,7 @@
         public function fetch_single($id){
             $data = null;
             
-            $query = "SELECT * FROM records WHERE id = '$id'";
+            $query = "SELECT r.id, r.name, r.nick, r.phone, p.pname, r.siblings, r.birth, r.friend, r.note FROM records r JOIN places p ON r.place=p.id WHERE r.id = '$id'";
             if ($sql = $this->conn->query($query)) {
                 while ($row = $sql->fetch_assoc()) {
                     $data = $row;

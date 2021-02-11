@@ -37,6 +37,7 @@
                                 <th class="text-center"style="color: #ba7d3e; font-family: Papyrus, fantasy">Ime i prezime</th>
                                 <th class="text-center"style="color: #ba7d3e; font-family: Papyrus, fantasy">Da li imas nadimak?</th>
                                 <th class="text-center"style="color: #ba7d3e; font-family: Papyrus, fantasy">Broj telefona</th>
+                                <th class="text-center"style="color: #ba7d3e; font-family: Papyrus, fantasy">Odakle si?</th>
                                 <th class="text-center"style="color: #ba7d3e; font-family: Papyrus, fantasy">Da li imas brata ili sestru?</th>
                                 <th class="text-center"style="color: #ba7d3e; font-family: Papyrus, fantasy">Datum rodjenja</th>
                                 <th class="text-center"style="color: #ba7d3e; font-family: Papyrus, fantasy">Kako ti se zove najbolji drug/drugarica?</th>
@@ -59,6 +60,7 @@
                                 <td style="color: #37404f"><?php echo $row['name']; ?></td>
                                 <td style="color: #37404f"><?php echo $row['nick']; ?></td>
                                 <td style="color: #37404f"><?php echo $row['phone']; ?></td>
+                                <td style="color: #37404f"><?php echo $row['pname']; ?></td>
                                 <td style="color: #37404f"><?php echo $row['siblings']; ?></td>
                                 <td style="color: #37404f"><?php echo $row['birth']; ?></td>
                                 <td style="color: #37404f"><?php echo $row['friend']; ?></td>

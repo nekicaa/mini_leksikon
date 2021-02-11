@@ -51,6 +51,24 @@
                             <input type="text" name="phone" class="form-control">
                         </div>
                         <div class="form-group">
+                            <label for="" style="color: white; font-family: Papyrus, fantasy">Odakle si?</label>
+                                <?php
+                                    $conn = $model->ret();
+                                    $query = "SELECT * FROM places";
+                                    $pl = $conn->query($query);
+                                ?>
+                            <select class="form-control" name="place" id="place">
+                                <option disabled selected value>Odaberi mesto...</option>
+                                <?php
+                                    while ($row=$pl->fetch_array()) {
+                                ?>
+                                <option value="<?php echo $row['id'];?>"><?php echo $row['pname'];?></option>
+                                <?php
+                                    }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="" style="color: white; font-family: Papyrus, fantasy">Da li imas brata ili sestru?</label>
                             <input type="text" name="siblings" class="form-control">
                         </div>

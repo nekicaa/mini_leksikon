@@ -49,6 +49,7 @@
                             <p><b>Ime i prezime:</b> <?php echo $row['name']; ?></p>
                             <p><b>Nadimak:</b> <?php echo $row['nick']; ?></p>
                             <p><b>Broj telefona:</b> <?php echo $row['phone']; ?></p>
+                            <p><b>Odakle si:</b> <?php echo $row['pname']; ?></p>
                             <p><b>Braca/sestre:</b> <?php echo $row['siblings']; ?></p>
                             <p><b>Datum rodjenja:</b> <?php echo $row['birth']; ?></p>
                             <p><b>Najbolji drug/drugarica:</b> <?php echo $row['friend']; ?></p>
