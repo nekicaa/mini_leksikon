@@ -85,7 +85,7 @@
                             <textarea name="note" id="" cols="" rows="" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit" name="submit" class="btn btn-primary" style="color: white; font-family: Papyrus, fantasy">Popunjeno!</button>
+                            <button type="submit" name="submit" class="btn btn-primary" onclick="allnumeric(document.forma.phone)" style="color: white; font-family: Papyrus, fantasy">Popunjeno!</button>
                         </div>
                     </form>
 
