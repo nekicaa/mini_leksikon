@@ -26,7 +26,14 @@
                 <h1 class="text-center" style="color: dark-blue; font-family: Papyrus, fantasy"><b>NEVENIN LEKSIKON</b></h1>
             </div>
             <div class="col-md-12 mt-5">
-                <button type="submit" name="submit" class="btn btn-primary" style="color: white; font-family: Papyrus, fantasy">Popunjeno!</button>
+                <p class="text-center" style="color: dark-blue; font-size: 30px; font-family: Papyrus, fantasy; background-color: #f9f1ee;">
+                    Dobro dosli na stranicu Neveninog leksikona! Mozete se upisati u leksikon na stranici za upis ili mozete pogledati leksikon i upisane prijatelje na strani za pregled leksikona. 
+                    <br> Drago mi je da ste posetili moj leksikon!
+                </p>
+            </div>
+            <div class="col-md-12 mt-5" align="center">
+                <button type="submit" name="submit" class="btn btn-primary" onclick="location.href='fillform.php'" style="color: white; font-family: Papyrus, fantasy">Upisi se!</button>
+                <button type="submit" name="submit" class="btn btn-primary" onclick="location.href='journal.php'" style="color: white; font-family: Papyrus, fantasy">Pogledaj leksikon!</button>
             </div>
         </div>
 
