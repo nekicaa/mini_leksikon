@@ -120,7 +120,7 @@
                             <textarea name="note" id="" cols="" rows="" class="form-control"><?php echo $row['note'];?></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="update" name="update" class="btn btn-primary" style="color: white; font-family: Papyrus, fantasy">Izmeni</button>
+                            <button type="update" name="update" class="btn btn-primary" onclick="allnumeric(document.forma.phone)" style="color: white; font-family: Papyrus, fantasy">Izmeni</button>
                         </div>
                     </form>
 
